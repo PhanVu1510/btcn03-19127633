@@ -1,0 +1,69 @@
+<form id="betaptinh" action="">
+    <div class="container" id="app">
+        <h2>Bé tập tính</h2>
+        <div class="row">
+            <div class="col-auto">
+                <div class="row">
+                    <h5>Số thứ nhất</h5>
+                </div>
+                <div class="row">
+                    <h5>Số thứ hai</h5>
+                </div>
+                <div class="row">
+                    <h5>Kết quả</h5>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="row">
+                    <input type="text" id="num1" size="14" name="x" onfocusout="outFocus()" value={{{x}}}>
+                </div>
+
+                <div class="row">
+                    <input type="text" id="num2" size="14" name="y" onfocusout="outFocus()" value={{{y}}}>
+                </div>
+
+                <div class="row">
+                    <input type="text" id="res" name="z" size="14" value={{{z}}}>
+                </div>
+
+            </div>
+
+            <div class="col-auto radio-group">
+                <form id="radio-form">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="option">
+                                <input value="add" type="radio" name="radio" {{{add}}}/><label for="add"><h5>Cộng</h5>
+                            </div>
+                            <div class="option radio-bottom">
+                                <input value="mul" type="radio" name="radio" {{{mul}}}/><label for="mul"><h5>Nhân</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="option">
+                                <input value="minus" type="radio" name="radio" {{{minus}}}/><label for="minus"><h5>Trừ</h5>
+                            </div>
+                            <div class="option radio-bottom">
+                                <input value="div" type="radio" name="radio" {{{div}}}/><label for="div"><h5>Chia</h5>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+                <input type="submit" value="Tính" id="compute-btn" style="margin-top: 6px;">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                <h5>Thông báo</h5>
+            </div>
+            <div class="col-auto">
+                <h5 id="notification">{{{notification}}}</h5>
+            </div>
+        </div>
+    </div>
+</form>
+
